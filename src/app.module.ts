@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
+import { UsersModule } from './users/user.module';
 
 @Module({
   imports: [
@@ -13,10 +14,12 @@ import { ConfigService } from './config/config.service';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
         uri: configService.get('MONGODB_URI'),
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useCreateIndex: true
       }),
       inject: [ConfigService]
-    })
+    }),
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
