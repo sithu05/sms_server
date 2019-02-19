@@ -25,6 +25,7 @@
     "@nestjs/mongoose": "^5.2.2",
     "dotenv": "^6.2.0",
     "mongoose": "^5.4.13",
+    "passport-local-mongoose": "^5.0.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
