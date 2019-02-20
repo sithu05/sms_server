@@ -5,6 +5,7 @@
   "author": "Si Thu Aung",
   "license": "MIT",
   "scripts": {
+    "seed": "ts-node -r tsconfig-paths/register src/seeder.ts",
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
