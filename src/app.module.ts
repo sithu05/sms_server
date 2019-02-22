@@ -7,6 +7,8 @@ import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
 import { UsersModule } from './users/user.module';
 import { AuthModule } from './auth/auth.module';
+import { CourseModule } from './courses/course.module';
+import { SettingModule } from './setting/setting.module';
 
 @Module({
   imports: [
@@ -21,7 +23,9 @@ import { AuthModule } from './auth/auth.module';
       inject: [ConfigService]
     }),
     AuthModule,
-    UsersModule
+    UsersModule,
+    CourseModule,
+    SettingModule
   ],
   controllers: [AppController],
   providers: [AppService],
